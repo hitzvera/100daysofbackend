@@ -38,6 +38,88 @@ world
 `
 ```
 
+#### promises
+
+```
+promise
+  .then((result) => { ··· })
+  .catch((error) => { ··· })
+  .finally(() => {
+    /*logic independent of success/error */
+  })
+
+  <!-- function parameter
+   -->
+   function greet({ name, greeting }) {
+  console.log(`${greeting}, ${name}!`)
+}
+
+greet({ name: 'Larry', greeting: 'Ahoy' })
+
+
+```
+
+#### destructing assignment
+
+```
+const [first, last] = ['Nikola', 'Tesla']
+
+let {title, author} = {
+  title: 'The Silkworm',
+  author: 'R. Galbraith'
+}
+```
+
+#### spead operator
+
+```
+const users = [
+  ...admins,
+  ...editors,
+  'rstacruz'
+]
+
+const options = {
+  ...defaults,
+  visible: true
+}
+```
+
+## Async/await
+
+async is used in conjuection with a function declaration creates an async functino that returnes a promises. async functnios allow us to use the keyword await to block the event loop
+
+## setInterval and setTimeout
+
+**setInterval** executes a code block at a specified interval in millieseconds. it requires two paramters. simply it will execute the code every millieseconds interval
+**setTimeout** executes a code block once after milleseconds given parameter
+
+## JSON
+
+JSON is javascript object notation is a format usually used for sending and recevieng the data between frontend and backend.
+
+### JSON syntax
+
+```
+{
+  "student": {
+    "name": "Rumaisa Mahoney",
+    "age": 30,
+    "fullTime": true,
+    "languages": [ "JavaScript", "HTML", "CSS" ],
+    "GPA": 3.9,
+    "favoriteSubject": null
+  }
+}
+```
+
+**Note the following syntax rules for JSON:**
+
+- The curly braces, {..}, hold objects.
+- The square brackets, [..], hold arrays.
+- Every name-value pair is separated from another pair by a comma, ,. Similarly, every item in an array is delimited by a comma as well. Trailing commas are forbidden.
+- JSON property names must be in double-quoted (" ") text even though JavaScript names do not hold by this stringency.
+
 ## glosarium
 
 - _web server_ merupakan sebuah komputer yang berjalan. yang memproses
