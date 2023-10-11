@@ -195,3 +195,30 @@ create table sellers(
 );
 ```
 dari code tersebut kolom yang diberi index adalah id, email, dan name.
+
+bisa juga kita memiliki banyak index di beberapa kolom
+
+```
+create table sellers(
+    id int not null auto_increment,
+    name varchar(100),
+    name2 varchar(100),
+    name3 varchar(100),
+    email varchar(100),
+    primary key (id),
+    unique key email_unique (email),
+    index name_index (name),
+    index name2_index (name2),
+    index name3_index (name3),
+    index name_name2_name3_index (name, name2, name3)
+);
+```
+dari query tersebut kita bisa menyimpulkan bahwa yang terindex itu
+name
+name2
+name3
+name dan name2
+name dan name2 dan name3
+
+dan yang tidak terindex kalo kita menggabungkan
+name2 dan name3.
